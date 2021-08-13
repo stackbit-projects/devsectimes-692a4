@@ -1,0 +1,48 @@
+stackbitVersion: ~0.3.0
+ssgName: jekyll
+publishDir: _site
+dataDir: _data
+pagesDir: ''
+models:
+  post:
+    type: page
+    label: Post
+    folder: _posts
+    match: '*'
+    fields:
+      - type: string
+        name: layout
+        label: Layout
+      - type: string
+        name: title
+        label: Title
+      - type: string
+        name: description
+        label: Description
+      - type: datetime
+        name: modified
+        label: Modified
+      - type: list
+        name: tags
+        label: Tags
+        items:
+          type: string
+      - type: object
+        name: image
+        label: Image
+        fields:
+          - type: image
+            name: feature
+            label: Feature
+          - type: string
+            name: credit
+            label: Credit
+          - type: string
+            name: creditlink
+            label: Creditlink
+          - type: image
+            name: background
+            label: Background
+      - type: string
+        name: author
+        label: Author
